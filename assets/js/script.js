@@ -7,7 +7,7 @@ function handleFormSubmit(event) {
 
     var itemInput = $('input[name="shopping-input"]');
 
-    shoppingListEl.append(itemInput.val());
+    shoppingListEl.append('<li>' + itemInput.val() + '</li>');
 
     itemInput.val('');
 }
