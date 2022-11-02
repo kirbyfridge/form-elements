@@ -5,13 +5,11 @@ var shoppingListEl = $('#shopping-list');
 function handleFormSubmit(event) {
     event.preventDefault();
 
-    var shoppingItem = $('<li>');
+    var itemInput = $('input[name="shopping-input"]');
 
-    shoppingItem.text = $('#shopping-input').val();
+    shoppingListEl.append(itemInput.val());
 
-    shoppingListEl.append(shoppingItem);
-
-    $('input[type="text"]').val('');
+    itemInput.val('');
 }
 
 // TODO: Add an event listener to the `shoppingFormEl` to handle submission
